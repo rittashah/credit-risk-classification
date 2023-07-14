@@ -18,9 +18,9 @@ lending_data.csv
    - the total debt
 
 - The dataset contain (77,536 data points) and  was split into training and testing sets.
-- The training set was used to build an initial logistic regression model(Model 1), using the LogisticRegression     module from scikit-learn.
+- The training set was used to build an initial logistic regression model(Model 1), using the LogisticRegression module from scikit-learn.
 - Logistic Regression Model was then applied to the testing dataset.
-- The purpose of the model was to determine whether a loan to the borrower in the testing set would be     low- or high-risk.
+- The purpose of the model was to determine whether a loan to the borrower in the testing set would be low- or high-risk.
 the intial model had 75,036 low-risk loan data points and 2,500 high-risk data points.
 
 To resample the training data and ensure that the logistic regression model had an equal number of data points, the training set data was resampled with the RandomOverSampler module (Model 2) from imbalanced-learn. This generated 56,277 data points for both low-risk (0) and high-risk (1) loans, based on the original dataset.
@@ -31,10 +31,10 @@ The resampled data was used to build a new logistic regression model (Logistic R
 
 Logistic Regression Model 1:
 
-  -  Accuracy: the model displays 18679 true positive results and 558 true negative results.with    blanced accuracy of 0.9442676901753825
-  -  Precision:the model performs better predicting healthy loans (precision 1) than high-risk               loans (precision 0.87).
-  -  Recall (the ratio of actual positives identified correctly): the model performs better predicting       healthy loans (recall 1) than high-risk loans (recall 0.89).
-  -   Support (the number of actual occurrences of the class in the specified dataset): according to          the support column, the model is imbalanced in the training data (healthy loans 18759 vs high-          risk loans 625), indicating structural weaknesses in the reported scores, in the evaluation             process.
+  -  Accuracy: the model displays 18679 true positive results and 558 true negative results.with blanced accuracy of 0.9442676901753825
+  -  Precision:the model performs better predicting healthy loans (precision 1) than high-risk loans (precision 0.87).
+  -  Recall (the ratio of actual positives identified correctly): the model performs better predicting healthy loans (recall 1) than high-risk loans (recall 0.89).
+  -   Support (the number of actual occurrences of the class in the specified dataset): according to the support column, the model is imbalanced in the training data (healthy loans 18759 vs high-risk loans 625), indicating structural weaknesses in the reported scores, in the evaluation process.
 
 Logistic Regression Model 2:
 
@@ -45,7 +45,7 @@ Logistic Regression Model 2:
 
 ## Summary
 
-keeoing in mind that discerning potential high-risk loan holders is of most importance, since  those accounts are responsible for the majority of the bank's lost.
+keeping in mind that identifying potential high-risk loan holders is of most importance, since those accounts are responsible for the majority of the bank's lost.
 
 'Machine Learning Model 2'  reported high balanced score and shows high levels of Accuracy, Precision and Recall for both healthy loans and high-risk loans. With more data points after the resampling, the model.
 We would recommend utilizing the second model because of its heightened ability to detect 'high risk loans' accurately. This is especially important given how much it can cost a loan provider to misidentify and lend money to a 'high risk loan' applicant, and the minimal cost of misidentifying a 'healthy loan' applicant. 
